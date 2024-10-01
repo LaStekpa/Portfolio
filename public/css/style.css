@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "Kagura";
+    src:
+        local("Kagura"),
+        url("./fonts/Kagura.otf") format("opentype"),
+}
+
+@font-face {
+    font-family: "Ginger";
+    src:
+        local("Ginger"),
+        url("./fonts/Ginger.otf") format("opentype"),
+}
+
+/* --- SCROLLBAR --- */
+
+
+
+/* --- CSS Page --- */
+
+body {
+    font-family: "Montserrat";
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* --- Navbar --- */
+nav {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+#logo,
+#logo a {
+    font-family: Kagura;
+    font-size: 50px;
+    padding: 30px;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: Ginger;
+    font-size: 120px;
+}
+
+h2 {
+    font-family: Ginger;
+    font-size: 50px;
+}
+
+/* --- Accueil --- */
+
+.containervideo {
+    position: relative;
+    overflow: hidden;
+    padding-top: 70px;
+    padding-bottom: 300px;
+}
+
+#background-video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+img {
+    max-width: 400px;
+    max-height: 400px;
+    padding: 0px;
+}
+
+#poste {
+    font-size: 22px;
+    font-family: Ginger;
+}
+
+span {
+    color: #CCD5AE;
+}
+
+/* --- About --- */
+
+.about {
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+/* --- Expériences --- */
+
+/* --- Let's Connect --- */
+
+#connecticon {
+    font-size: 20px;
+    padding-left: 150px;
+}
+
+#connecticon a i:hover {
+    text-decoration: line-through;
+    color: #CCD5AE;
+}
+
+.linkconnect {
+    font-family: montserrat;
+}
+
+/* --- Footer --- */
+
+.containerimg {
+    padding-top: 300px;
+    background-image: url('%PUBLIC_URL%/images/lotademacedojaffostberg.png');
+    background-size: cover;
+    background-position: 0% 35%;
+}
+
+footer {
+    padding-top: 150px;
+    color: white;
+}
+
+.btn {
+    padding: 15px 100px;
+    margin: 10px 4px;
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background: #6098FF;
+    display: block;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+}
+
+.btn:hover::before {
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1)
+}
